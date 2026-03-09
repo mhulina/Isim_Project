@@ -1,5 +1,7 @@
 [
 null,
-{"id":1,"battlerName":"harold_battler2","characterIndex":0,"characterName":"_srw_character_1-8","classId":1,"equips":[23,0,11,17],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"Isim","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""},
-{"id":2,"battlerName":"therese_battler6","characterIndex":1,"characterName":"$therese","classId":2,"equips":[21,0,11,18],"faceIndex":3,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"Cadia","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""}
+{"id":1,"battlerName":"harold_battler2","characterIndex":0,"characterName":"$harold","classId":1,"equips":[14,31,11,17],"faceIndex":0,"faceName":"testFace","traits":[],"initialLevel":1,"maxLevel":99,"name":"Harold","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""},
+{"id":2,"battlerName":"therese_battler6","characterIndex":1,"characterName":"$therese","classId":1,"equips":[21,0,11,18],"faceIndex":3,"faceName":"testFace","traits":[],"initialLevel":1,"maxLevel":99,"name":"Therese","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""},
+{"id":3,"battlerName":"marsha_battler2","characterIndex":1,"characterName":"$marsha","classId":1,"equips":[28,0,11,13],"faceIndex":1,"faceName":"testFace","traits":[],"initialLevel":1,"maxLevel":99,"name":"Marsha","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""},
+{"id":4,"battlerName":"lucius_battler5","characterIndex":0,"characterName":"$lucius","classId":1,"equips":[28,0,11,12],"faceIndex":2,"faceName":"testFace","traits":[],"initialLevel":1,"maxLevel":99,"name":"Lucius","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""}
 ]
