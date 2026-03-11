@@ -1,5 +1,5 @@
 [
 null,
-{"id":1,"battlerName":"harold_battler2","characterIndex":0,"characterName":"_srw_character_1-8","classId":1,"equips":[23,0,11,17],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"Isim","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""},
+{"id":1,"battlerName":"harold_battler2","characterIndex":0,"characterName":"_srw_character_1-8","classId":1,"equips":[23,0,11,17],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"Isim","nickname":"","note":"<Starting JP: 1000>\n<Change Initial TP: +100>","profile":""},
 {"id":2,"battlerName":"therese_battler6","characterIndex":1,"characterName":"$therese","classId":2,"equips":[21,0,11,18],"faceIndex":3,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"Cadia","nickname":"","note":"<Starting JP: 40>\n<Change Initial TP: +100>","profile":""}
 ]
