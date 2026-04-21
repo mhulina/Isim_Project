@@ -1,5 +1,5 @@
 {
-    "name": "",
+    "name": "isimproject",
     "main": "index.html",
     "js-flags": "--expose-gc",
     "window": {
