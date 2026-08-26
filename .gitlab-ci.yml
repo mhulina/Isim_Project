@@ -3,7 +3,11 @@ stages:
 
 deploy_itch:
   stage: deploy
-  image: alpine:latest
+  # Not alpine: butler ships with bundled C shared libraries (7z.so,
+  # libc7zip.so) compiled against glibc, which musl-based alpine doesn't
+  # have - it fails to exec with a misleading "not found" error despite
+  # the file existing. Needs a real glibc distro.
+  image: debian:bookworm-slim
   tags:
     - isim_project
   # Only runs on an actual push to master - not merge request pipelines,
@@ -11,7 +15,7 @@ deploy_itch:
   rules:
     - if: '$CI_COMMIT_BRANCH == "master" && $CI_PIPELINE_SOURCE == "push"'
   before_script:
-    - apk add --no-cache zip unzip curl
+    - apt-get update && apt-get install -y --no-install-recommends zip unzip curl ca-certificates
     - curl -L -o butler.zip "https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default"
     - unzip -o butler.zip -d butler-bin
     - chmod +x butler-bin/butler
