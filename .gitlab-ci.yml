@@ -1,0 +1,35 @@
+stages:
+  - deploy
+
+deploy_itch:
+  stage: deploy
+  image: alpine:latest
+  tags:
+    - isim_project
+  # Only runs on an actual push to master - not merge request pipelines,
+  # not the "Run pipeline" button in the UI, not scheduled runs.
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master" && $CI_PIPELINE_SOURCE == "push"'
+  before_script:
+    - apk add --no-cache zip unzip curl
+    - curl -L -o butler.zip "https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default"
+    - unzip -o butler.zip -d butler-bin
+    - chmod +x butler-bin/butler
+    - export PATH="$CI_PROJECT_DIR/butler-bin:$PATH"
+    - butler -V
+  script:
+    # Explicit allow-list of what actually ships - only the files RPG Maker
+    # needs to run in a browser. Anything not listed here (docs/, .git,
+    # this file, README, etc.) is left out automatically rather than
+    # needing to be excluded one by one.
+    - mkdir isim_build
+    - cp -r audio data fonts icon img js index.html package.json isim_build/
+    - cd isim_build
+    - zip -r ../isim.zip .
+    - cd ..
+    # `butler push` targets a channel, not a single file - pushing here
+    # makes this build the new "current" one for that channel, which is
+    # what replaces whatever was there before. Butler keeps prior builds
+    # in the channel's history for rollback, it doesn't delete them, but
+    # nothing you upload after this will show the old build as current.
+    - ./butler-bin/butler push isim.zip "$ITCH_TARGET"
