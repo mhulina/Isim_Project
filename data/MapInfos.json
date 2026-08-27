@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":false,"name":"DevDebugMap","order":1,"parentId":0,"scrollX":819,"scrollY":456.5},
-{"id":2,"expanded":false,"name":"Intro - Flooded Valley","order":2,"parentId":0,"scrollX":811,"scrollY":503.5},
-{"id":3,"expanded":false,"name":"ParallaxIntro","order":3,"parentId":0,"scrollX":811,"scrollY":498.5}
+{"id":1,"expanded":false,"name":"DevDebugMap","order":1,"parentId":0,"scrollX":1228.5,"scrollY":684.75},
+{"id":2,"expanded":true,"name":"Intro - Flooded Valley","order":2,"parentId":0,"scrollX":1228.5,"scrollY":684.75},
+{"id":3,"expanded":false,"name":"SlantedForestEdge","order":3,"parentId":2,"scrollX":1228.5,"scrollY":684.75}
 ]
